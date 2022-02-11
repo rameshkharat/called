@@ -1,0 +1,16 @@
+name: simple workflow
+on:
+ workflow_call:
+jobs:
+    sample-job-1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: step-1
+              run: |
+                 echo $hostname "called"
+                 echo $UID  "called"
+
+            - name: step-2
+              run: | 
+                 echo " Trying to be called workflow"
+                  
